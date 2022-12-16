@@ -1,11 +1,4 @@
-/*!
-* Start Bootstrap - Creative v7.0.6 (https://startbootstrap.com/theme/creative)
-* Copyright 2013-2022 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
+
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -57,3 +50,15 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+////////////////////////////////////////////////////////
+//nav to next section
+//
+////////////////////////////////////////////////////////
+const nav = document.querySelector('.nav');
+const journeyBtn = document.querySelector('.journey');
+journeyBtn.addEventListener('click',function(e){
+    document.querySelector('#services').scrollIntoView({
+      behavior: 'smooth',
+    });
+})
