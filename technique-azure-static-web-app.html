@@ -206,6 +206,17 @@
               >”，验证绑定域名成功
             </p>
             <h5>第四步，更新网页内容</h5>
+            <p class="cited">
+              由于使用 static web apps 做网站部署时，会自动在 live-blog2 的
+              github 代码仓中，新建.github/workfolw/xxxx.yml 文件，而本地的
+              live-blog2 文件夹内，并不包含该文件，<br />如果直接对修改后的文件在终端使用
+              git push，live-blog2 的 github 代码仓中的.github/workfolw/xxxx.yml
+              文件将会消失，而该文件是同步更新 github 与 azure
+              静态网页的工作桥梁，消失后则无法实现自动更新网站内容。
+            </p>
+            1. 解决办法：命令行中键入“git pull” ，将 remote 仓库中的 file
+            更新到本地
+            <p></p>
           </div>
         </div>
       </div>
