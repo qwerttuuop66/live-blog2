@@ -189,6 +189,8 @@ p {
   font-size: 1rem;
   margin-top: 0;
   margin-bottom: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 abbr[title],
@@ -3153,7 +3155,7 @@ fieldset:disabled .btn {
 }
 .btn-check:focus + .btn-primary,
 .btn-primary:focus {
-  color:  rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
   background-color: #f1e4e0;
   border-color: #f2e8e5;
   box-shadow: 0 0 0 0.25rem rgba(240, 242, 243, 0.5);
@@ -11816,6 +11818,16 @@ header.masthead .h1 {
   background-attachment: scroll;
   background-size: cover;
 }
+.header-technique {
+  padding-top: 8rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background-image: url("../assets/img/code.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
 header.header-article h1,
 header.header-article .h1 {
   font-size: 2.25rem;
@@ -11842,10 +11854,16 @@ header .header-article-section .h1 {
   padding-left: 2.5rem;
   padding-right: 5rem;
 }
+
 @media (min-width: 1400px) {
   .article-content {
     padding-right: 25rem;
     padding-left: 25rem;
+  }
+  .contact-section {
+    padding-left: 20rem;
+    padding-right: 20rem;
+    padding-top: 2rem;
   }
 }
 
@@ -11854,6 +11872,11 @@ header .header-article-section .h1 {
     padding-right: 15rem;
     padding-left: 15rem;
   }
+  .contact-section {
+    padding-left: 15rem;
+    padding-right: 15rem;
+    padding-top: 2rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -11861,11 +11884,21 @@ header .header-article-section .h1 {
     padding-right: 5rem;
     padding-left: 5rem;
   }
+  .contact-section {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 2rem;
+  }
 }
 @media (max-width: 992px) and (min-width: 768px) {
   .article-content {
     padding-right: 8rem;
     padding-left: 8rem;
+  }
+  .contact-section {
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 2rem;
   }
 }
 .article-content .cited {
@@ -11926,6 +11959,7 @@ header .header-article-section .h1 {
   background-attachment: scroll;
   background-size: cover;
 }
+
 #portfolio .container-fluid,
 #portfolio .container-sm,
 #portfolio .container-md,

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>LIU - Live Blog</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/my_icon.ico" />
+    <!-- Bootstrap Icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- SimpleLightbox plugin CSS-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css"
+      rel="stylesheet"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body id="page-top">
+    <!-- Navigation-->
+    <nav
+      class="navbar navbar-expand-lg navbar-light fixed-top py-3"
+      id="mainNav"
+    >
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">Liuliu's live Blog</a>
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto my-2 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="article.html">Artical</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="technique.html">Technique</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Arts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="movie.html">Movie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="header-technique">
+      <section
+        class="header-article-section"
+        id="header-article-title"
+      ></section>
+    </header>
+    <section class="">
+      <div class="book-title">
+        <h1>使用azure static web apps 搭建静态博客</h1>
+        <h6>writen by LIULIU</h6>
+      </div>
+      <div class="article-content">
+        <div class="">
+          <div class="para--01">
+            <p class="cited">
+              前提：需要使用 github 部署网页，需要自己写 html，css，JavaScript
+              代码，此方法并不适合零代码基础的小白来搭建自己的博客
+            </p>
+            <p class="cited">
+              此方法的优势：<br />直接与 GitHub
+              代码仓连结，修改代码完成提交即可实现网站的自动更新；<br />支持
+              https；<br />对博客的网页设计有全方位的掌控。
+            </p>
+            <h5>第一步，上传自己的博客内容代码</h5>
+            <p>
+              在 github 中上传自己的代码，以本文为例，上传至 live-blog2 代码仓的
+              master branch
+            </p>
+            <h5>第二步，利用 azure static web apps 部署网站</h5>
+            <p>1. azure 注册/登陆账号</p>
+            <p>
+              登陆<a href="https://portal.azure.com"
+                >https://portal.azure.com</a
+              >
+              ，使用自己的微软账号灯登陆后，选择订阅方式：free trail
+              （需要有实体信用卡验证身份）或是自费（需要有实体信用卡或是借记卡）；<br />或者通过<a
+                href="https://azure.microsoft.com/en-us/free/students/"
+                >https://azure.microsoft.com/en-us/free/students/
+              </a>
+              <br />选择 Azure for Students 登陆， Aszure for Students 和 free
+              trail 两者都可以可获得 200 美元的 Azure 产品和服务免费额度，以及
+              12 个月的热门免费服务 （github 提供给在校学生免费的资源库中包含了
+              Azure for Students 的学生包，<a href="#">如何获取？</a>）
+            </p>
+            <p>
+              2. 新建资源 (create resource)，选择静态 Web 应用（static web
+              apps）
+            </p>
+            <p>
+              3. 填写create static web app表单
+              <img src="./assets/img/azure-static-web-app1.PNG" />
+              <img src="./assets/img/azure-static-web-app2.PNG" />
+            </p>
+            <p>
+              &nbsp&nbsp3.1 subsription: 选择自己的订阅方式<br />
+              free trail 或是 Purchase Options（自费） 或是 Azure for Students
+            </p>
+            <p>
+              &nbsp&nbsp3.2 resouce
+              group：可以是之前建立的资源组，可以新建一个资源组
+            </p>
+            <p>&nbsp&nbsp3.3 name：给自己的 app 取一个名字</p>
+
+            <p>
+              &nbsp&nbsp3.4 hosting plan：a) free, b) standard<br />
+              对于只是搭建博客来说，free 计划足够用，两者的区别是，standard
+              可以在自己的网页中添加用户的身份验证功能（Custom
+              authentication），以及私有终结点（private endpoint）
+            </p>
+            <p>
+              &nbsp&nbsp3.5 function
+              api：选择服务器所在地区名称，优先选择离自己地区近的地方
+            </p>
+            <p>
+              &nbsp&nbsp3.6 deployment detail：本文以 github 作为部署方式<br />选择自己的
+              GitHub 账号，代码仓（repository），以及分支（branch）
+            </p>
+            <p>
+              &nbsp&nbsp3.7 build details：<br />
+              build presets：选择自己网站的搭建框架，本文以自己写的
+              html，css，JavaScript 为例，选择“Custom”<br />
+              app
+              location，搭建的代码在代码仓的所在位置，如果在根目录下，该空格填写“/”
+              <br />api location 和 output location 默认不填写
+            </p>
+            <p>&nbsp&nbsp3.8 review+create：点击创建即可</p>
+            <p>
+              4. 创建完成之后会有如下所示界面，点击 browse，可预览搭建好的网站
+            </p>
+            <h5>（可选）第三步，修改域名</h5>
+            <p>
+              1. 购买一个自己的域名（以“liuliuwu.me”为例，<br />本文通过 GitHub
+              学生包中 namecheap 提供的免费域名资格，<a href="#">如何获取？</a
+              >）
+            </p>
+            <p>
+              2. 在
+              <a href="https://www.namecheap.com/">namecheap </a
+              >官网中增加一个新的“CNAME record”<br />
+              host
+              为域名，可以是“www”，或是自己命名的其他单词如本文中的“blog2”<br />value
+              为初始网址“<a
+                href="https://orange-ground-092bd1c00.2.azurestaticapps.net"
+                >https://orange-ground-092bd1c00.2.azurestaticapps.net”</a
+              >除去“https://”后的部分，TTL
+              可以理解为设定网页的最长加载时间，本文设定的是 1min。
+            </p>
+            <p>
+              3. 回到azure网页，进入新建的static web app控制页面内，选择“custom
+              domain”<br />点击添加按钮“add”，有两个选项：“Azure DNS”和“other
+              DNS”<br />本文中使用的是 namecheap 提供的 DNS，因此点击第二个。
+            </p>
+            <p>
+              4. 在弹出的表单中填写域名（domain name）<br />由于在 namecheap
+              中添加CNAME record时，设定的host
+              name为“blog2”，因此表单中域名填写为“blog2.liuliuwu.me”，下一步点击
+              add，等待认证（该认证过程需要关闭网络代理 VPN
+              等服务，可能有延迟，如果显示验证失败，可以多等十几分钟后重复第4步骤重新验证）
+            </p>
+            <p>5. 验证成功后，在“custom domain”页面显示了两条记录</p>
+            <p>
+              6. 在网页中输入“<a href="https://blog2.liuliuwu.me"
+                >https://blog2.liuliuwu.me</a
+              >”，验证绑定域名成功
+            </p>
+            <h5>第四步，更新网页内容</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="bg-light py-5">
+      <div class="container px-4 px-lg-5">
+        <div class="small text-center text-muted">
+          Copyright &copy; 2022 - LIULIU
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SimpleLightbox plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+  </body>
+</html>
