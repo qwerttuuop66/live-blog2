@@ -130,8 +130,21 @@
             </p>
             <p>
               3. 填写create static web app表单
-              <img src="./assets/img/azure-static-web-app1.PNG" />
-              <img src="./assets/img/azure-static-web-app2.PNG" />
+              <img
+                style="width: 70%"
+                class="img-content"
+                src="./assets/img/azure-static-web-app1.PNG"
+              />
+              <img
+                style="width: 70%"
+                class="img-content"
+                src="./assets/img/azure-static-web-app2.PNG"
+              />
+              <img
+                style="width: 70%"
+                class="img-content"
+                src="./assets/img/azure-static-web-app3.PNG"
+              />
             </p>
             <p>
               &nbsp&nbsp3.1 subsription: 选择自己的订阅方式<br />
@@ -167,7 +180,12 @@
             </p>
             <p>&nbsp&nbsp3.8 review+create：点击创建即可</p>
             <p>
-              4. 创建完成之后会有如下所示界面，点击 browse，可预览搭建好的网站
+              4. 创建完成之后会有如下所示界面，点击
+              browse，或是URL网址，可预览搭建好的网站
+              <img
+                class="img-content"
+                src="./assets/img/azure-static-web-app4.PNG"
+              />
             </p>
             <h5>（可选）第三步，修改域名</h5>
             <p>
@@ -178,19 +196,29 @@
             <p>
               2. 在
               <a href="https://www.namecheap.com/">namecheap </a
-              >官网中增加一个新的“CNAME record”<br />
+              >登陆账号后，在"Domain
+              List"菜单栏找到自己的域名选择“manage”，点击“Advanced
+              DNS”，增加一个新的“CNAME record”<br />
+              <img class="img-content" src="./assets/img/namecheap1.PNG" />
+              <img class="img-content" src="./assets/img/namecheap.PNG" />
+              <img
+                class="img-content"
+                src="./assets/img/namecheap2.PNG"
+              /><br />
+
               host
               为域名，可以是“www”，或是自己命名的其他单词如本文中的“blog2”<br />value
               为初始网址“<a
-                href="https://orange-ground-092bd1c00.2.azurestaticapps.net"
-                >https://orange-ground-092bd1c00.2.azurestaticapps.net”</a
+                href="https://green-bay-076566700.2.azurestaticapps.net"
+                >https://green-bay-076566700.2.azurestaticapps.net”</a
               >除去“https://”后的部分，TTL
               可以理解为设定网页的最长加载时间，本文设定的是 1min。
             </p>
             <p>
               3. 回到azure网页，进入新建的static web app控制页面内，选择“custom
               domain”<br />点击添加按钮“add”，有两个选项：“Azure DNS”和“other
-              DNS”<br />本文中使用的是 namecheap 提供的 DNS，因此点击第二个。
+              DNS”<br />本文中使用的是 namecheap 提供的 DNS，因此点击第二个。<br />
+              <img class="img-content" src="./assets/img/domainDNS.PNG" />
             </p>
             <p>
               4. 在弹出的表单中填写域名（domain name）<br />由于在 namecheap
@@ -198,8 +226,24 @@
               name为“blog2”，因此表单中域名填写为“blog2.liuliuwu.me”，下一步点击
               add，等待认证（该认证过程需要关闭网络代理 VPN
               等服务，可能有延迟，如果显示验证失败，可以多等十几分钟后重复第4步骤重新验证）
+              <img
+                style="width: 50%"
+                class="img-content"
+                src="./assets/img/domain1.PNG"
+              />
+              <img
+                style="width: 50%"
+                class="img-content"
+                src="./assets/img/domainDNS2.PNG"
+              /><br />
             </p>
-            <p>5. 验证成功后，在“custom domain”页面显示了两条记录</p>
+            <p>
+              5. 验证成功后，在“custom domain”页面显示了两条记录
+              <img
+                class="img-content"
+                src="./assets/img/domainDNS3.PNG"
+              /><br />
+            </p>
             <p>
               6. 在网页中输入“<a href="https://blog2.liuliuwu.me"
                 >https://blog2.liuliuwu.me</a
@@ -214,9 +258,23 @@
               文件将会消失，而该文件是同步更新 github 与 azure
               静态网页的工作桥梁，消失后则无法实现自动更新网站内容。
             </p>
-            1. 解决办法：命令行中键入“git pull” ，将 remote 仓库中的 file
-            更新到本地
-            <p></p>
+            1. 解决办法：命令行中键入“git pull” ，将 remote 仓库同步更新到本地
+            <p>
+              2. 修改网页内容
+              <img class="img-content" src="./assets/img/change-master.PNG" />
+            </p>
+            <p>3.“git push”将commit之后的文件上传至master分支中</p>
+            <p>
+              4. 通过github action 看到自动更新进程
+              <img
+                class="img-content"
+                src="./assets/img/master-github-action.PNG"
+              />
+            </p>
+            <p>
+              5. 验证网页
+              <img class="img-content" src="./assets/img/test-master.PNG" />
+            </p>
           </div>
         </div>
       </div>
